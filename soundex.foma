@@ -1,0 +1,25 @@
+define A a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z|A|B|C|D|E|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z;
+define S0 a|e|h|i|o|u|w|y;
+define S1 b|f|p|v;
+define S2 c|g|j|k|q|s|x|z;
+define S3 d|t;
+define S4 l;
+define S5 m|n;
+define S6 r;
+
+
+# Map Digit to numbers
+define step1 A [S0 -> x, S1 -> 1, S2 -> 2, S3 -> 3, S4 -> 4, S5 -> 5, S6 -> 6];
+
+# Map consecutive elements to the first element
+define step2 [1+ @-> 1, 2+ @-> 2, 3+ @-> 3, 4+ @-> 4, 5+ @-> 5, 6+ @-> 6];
+
+define Del x -> 0 || .#. ?+ _ ;
+
+	
+# Pad 0's or trim.
+define step3 [..] -> %0^3 || _ .#. .o. [? -> 0 || ?^4 _ ];
+
+define soundex step1 .o. Del .o. step2 .o. step3;
+
+regex soundex;

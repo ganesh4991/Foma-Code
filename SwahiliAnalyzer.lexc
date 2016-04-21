@@ -1,0 +1,40 @@
+Multichar_Symbols 1p+ 2p+ 3p+ 1Pl+ 3Pl+ PresPerf+ Future+ Past+ PresPro+
+
+LEXICON Root
+Sub ;
+
+LEXICON Sub
+
+ni:1p+ Tense;
+u:2p+ Tense;
+a:3p+ Tense;
+tu:1Pl+ Tense;
+wa:3Pl+ Tense;
+
+
+
+LEXICON Tense
+li:Past+ Obj;
+ta:Future+ Obj;
+na:PresPro+ Obj;
+me:PresPerf+ Obj;
+
+LEXICON Verb
+lipa:Verb  #;
+piga:Verb #;
+penda:Verb #;
+sumbua:Verb #;
+
+
+LEXICON Obj
+ni:1p+ Verb;
+ku:2p+ Verb;
+a:3p+ Verb;
+tu:1Pl+ Verb;
+wa:3Pl+ Verb;
+
+
+
+
+
+
